@@ -1,0 +1,7 @@
+class DeliveryAgent:
+    states=["Waiting for Order","Order Assigned","Picking Up Food","Delivering Food","Order Delivered"]
+    def __init__(self,i):
+        self.id=i; self.idx=0
+    def step(self):
+        if self.idx < len(self.states)-1: self.idx+=1
+        return self.states[self.idx]
